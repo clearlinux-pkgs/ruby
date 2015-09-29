@@ -1,6 +1,6 @@
 Name     : ruby
 Version  : 2.2.0
-Release  : 21 
+Release  : 22 
 URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0.tar.gz
 Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0.tar.gz
 Summary  : Object Oriented Script Language
