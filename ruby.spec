@@ -13,6 +13,10 @@ BuildRequires: openssl-dev
 BuildRequires: yaml-lib
 BuildRequires: readline-dev
 BuildRequires: zlib-dev
+BuildRequires: graphviz
+BuildRequires: gmp-dev
+BuildRequires: ncurses-dev
+
 Requires: ruby-bin
 Requires: ruby-data
 Requires: ruby-doc
