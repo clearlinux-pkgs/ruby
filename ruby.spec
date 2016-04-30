@@ -1,6 +1,6 @@
 Name     : ruby
 Version  : 2.3.0
-Release  : 25 
+Release  : 26 
 URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.3/ruby-2.3.0.tar.gz
 Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.3/ruby-2.3.0.tar.gz
 Summary  : Object Oriented Script Language
