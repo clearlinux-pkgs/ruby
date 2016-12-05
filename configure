@@ -1,0 +1,1 @@
+--prefix=/usr --enable-shared --disable-rpath --with-dbm-type=gdbm_compat --with-out-ext=tcl --with-out-ext=tk
