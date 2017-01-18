@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.4.0
-Release  : 35
+Release  : 36
 URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0.tar.gz
 Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0.tar.gz
 Summary  : Object Oriented Script Language
@@ -20,6 +20,7 @@ BuildRequires : graphviz
 BuildRequires : groff
 BuildRequires : openssl
 BuildRequires : openssl-dev
+BuildRequires : pkgconfig(zlib)
 
 %description
 you don't have to
@@ -75,17 +76,17 @@ lib components for the ruby package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484260396
+export SOURCE_DATE_EPOCH=1484767711
 %configure --disable-static --prefix=/usr --enable-shared --disable-rpath --with-dbm-type=gdbm_compat --with-out-ext=tcl --with-out-ext=tk
 make V=1  %{?_smp_mflags}
 
 %install
+export SOURCE_DATE_EPOCH=1484767711
 rm -rf %{buildroot}
 %make_install
 
 %files
 %defattr(-,root,root,-)
-
 /usr/lib64/ruby/2.4.0/English.rb
 /usr/lib64/ruby/2.4.0/abbrev.rb
 /usr/lib64/ruby/2.4.0/base64.rb
@@ -14054,3 +14055,4 @@ rm -rf %{buildroot}
 /usr/lib64/ruby/2.4.0/x86_64-linux-gnu/stringio.so
 /usr/lib64/ruby/2.4.0/x86_64-linux-gnu/strscan.so
 /usr/lib64/ruby/2.4.0/x86_64-linux-gnu/syslog.so
+/usr/lib64/ruby/2.4.0/x86_64-linux-gnu/zlib.so
