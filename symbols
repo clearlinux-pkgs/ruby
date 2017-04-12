@@ -1,7 +1,6 @@
 libruby.so.2.4:dln_find_exe_r
 libruby.so.2.4:dln_find_file_r
 libruby.so.2.4:dln_load
-libruby.so.2.4:explicit_bzero
 libruby.so.2.4:nucomp_canonicalization
 libruby.so.2.4:nurat_canonicalization
 libruby.so.2.4:onig_add_end_call
@@ -604,6 +603,7 @@ libruby.so.2.4:rb_gc_unregister_address
 libruby.so.2.4:rb_gc_verify_internal_consistency
 libruby.so.2.4:rb_gc_writebarrier
 libruby.so.2.4:rb_gc_writebarrier_unprotect
+libruby.so.2.4:rb_gcd
 libruby.so.2.4:rb_gcd_gmp
 libruby.so.2.4:rb_gcd_normal
 libruby.so.2.4:rb_generic_ivar_memsize
