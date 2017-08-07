@@ -4,16 +4,17 @@
 #
 Name     : ruby
 Version  : 2.4.1
-Release  : 45
+Release  : 46
 URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
 Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
-Summary  : Library supporting Foreign Function Interfaces
+Summary  : Object Oriented Script Language
 Group    : Development/Tools
 License  : MIT Ruby
 Requires: ruby-bin
 Requires: ruby-lib
 Requires: ruby-doc
 Requires: ruby-data
+BuildRequires : bison
 BuildRequires : doxygen
 BuildRequires : gmp-dev
 BuildRequires : graphviz
@@ -21,6 +22,7 @@ BuildRequires : groff
 BuildRequires : openssl
 BuildRequires : openssl-dev
 BuildRequires : pkgconfig(zlib)
+BuildRequires : ruby
 Patch1: cve-2015-3900.nopatch
 Patch2: cve-2017-9224.nopatch
 Patch3: cve-2017-9225.nopatch
@@ -28,6 +30,7 @@ Patch4: cve-2017-9226.nopatch
 Patch5: cve-2017-9227.nopatch
 Patch6: cve-2017-9228.nopatch
 Patch7: cve-2017-9229.nopatch
+Patch8: cve-2017-11465.patch
 
 %description
 = RubySpec
@@ -84,13 +87,14 @@ lib components for the ruby package.
 
 %prep
 %setup -q -n ruby-2.4.1
+%patch8 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1496440417
+export SOURCE_DATE_EPOCH=1502126030
 export CFLAGS="$CFLAGS -fstack-protector-strong "
 export FCFLAGS="$CFLAGS -fstack-protector-strong "
 export FFLAGS="$CFLAGS -fstack-protector-strong "
@@ -99,7 +103,7 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong "
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1496440417
+export SOURCE_DATE_EPOCH=1502126030
 rm -rf %{buildroot}
 %make_install
 
