@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.4.1
-Release  : 44
+Release  : 43
 URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
 Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz
 Summary  : Object Oriented Script Language
