@@ -1,0 +1,11 @@
+# This file contains recursive sources that require this package
+Keras
+LVM2
+Theano
+audit
+gvim
+libvirt
+ocl-icd
+ruby
+swig
+webkitgtk
