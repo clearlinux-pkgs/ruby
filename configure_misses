@@ -39,11 +39,9 @@ Configure miss: sys/id.h presence
 Configure miss: sys/id.h
 Configure miss: sys/utime.h usability
 Configure miss: sys/utime.h presence
-Configure miss: sys/utime.h
 Configure miss: struct stat.st_atimespec
 Configure miss: struct stat.st_atimensec
 Configure miss: struct stat.st_mtimespec
-Configure miss: struct stat.st_mtimensec
 Configure miss: struct stat.st_ctimespec
 Configure miss: struct stat.st_ctimensec
 Configure miss: struct stat.st_birthtimespec
@@ -52,7 +50,6 @@ Configure miss: sys/pstat.h usability
 Configure miss: sys/pstat.h presence
 Configure miss: broken memmem
 Configure miss: __syscall
-Configure miss: arc4random_buf
 Configure miss: chsize
 Configure miss: fgetattrlist
 Configure miss: getattrlist

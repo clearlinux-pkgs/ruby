@@ -209,6 +209,7 @@ libruby.so.2.4:rb_big2ll
 libruby.so.2.4:rb_big2long
 libruby.so.2.4:rb_big2str
 libruby.so.2.4:rb_big2str_generic
+libruby.so.2.4:rb_big2str_gmp
 libruby.so.2.4:rb_big2str_poweroftwo
 libruby.so.2.4:rb_big2ull
 libruby.so.2.4:rb_big2ulong
@@ -218,6 +219,7 @@ libruby.so.2.4:rb_big_clone
 libruby.so.2.4:rb_big_cmp
 libruby.so.2.4:rb_big_div
 libruby.so.2.4:rb_big_divmod
+libruby.so.2.4:rb_big_divrem_gmp
 libruby.so.2.4:rb_big_divrem_normal
 libruby.so.2.4:rb_big_eq
 libruby.so.2.4:rb_big_eql
@@ -227,6 +229,7 @@ libruby.so.2.4:rb_big_minus
 libruby.so.2.4:rb_big_modulo
 libruby.so.2.4:rb_big_mul
 libruby.so.2.4:rb_big_mul_balance
+libruby.so.2.4:rb_big_mul_gmp
 libruby.so.2.4:rb_big_mul_karatsuba
 libruby.so.2.4:rb_big_mul_normal
 libruby.so.2.4:rb_big_mul_toom3
@@ -601,6 +604,7 @@ libruby.so.2.4:rb_gc_verify_internal_consistency
 libruby.so.2.4:rb_gc_writebarrier
 libruby.so.2.4:rb_gc_writebarrier_unprotect
 libruby.so.2.4:rb_gcd
+libruby.so.2.4:rb_gcd_gmp
 libruby.so.2.4:rb_gcd_normal
 libruby.so.2.4:rb_generic_ivar_memsize
 libruby.so.2.4:rb_generic_ivar_table
@@ -1030,6 +1034,7 @@ libruby.so.2.4:rb_spawn_err
 libruby.so.2.4:rb_sprintf
 libruby.so.2.4:rb_st_copy
 libruby.so.2.4:rb_stat_new
+libruby.so.2.4:rb_str2big_gmp
 libruby.so.2.4:rb_str2big_karatsuba
 libruby.so.2.4:rb_str2big_normal
 libruby.so.2.4:rb_str2big_poweroftwo
