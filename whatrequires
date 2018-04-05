@@ -8,10 +8,14 @@ flatpak
 gmime
 gpgme
 gvim
+hamlib
+hyperscan
 libvirt
 notmuch
 ocl-icd
+ragel
 ruby
 swig
 volume_key
 webkitgtk
+weechat
