@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.4.4
-Release  : 52
+Release  : 53
 URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
 Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
 Summary  : Object Oriented Script Language
@@ -94,16 +94,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522907465
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs "
+export SOURCE_DATE_EPOCH=1526018251
+export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure --disable-static --prefix=/usr --enable-shared --disable-rpath --with-dbm-type=gdbm_compat --with-out-ext=tcl --with-out-ext=tk
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1522907465
+export SOURCE_DATE_EPOCH=1526018251
 rm -rf %{buildroot}
 %make_install
 

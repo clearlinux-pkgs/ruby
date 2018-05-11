@@ -3,6 +3,7 @@ Keras
 LVM2
 Theano
 audit
+clr-init
 comedilib
 flatpak
 gmime
@@ -15,6 +16,7 @@ notmuch
 ocl-icd
 ragel
 ruby
+subversion
 swig
 volume_key
 webkitgtk
