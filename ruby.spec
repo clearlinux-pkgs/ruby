@@ -4,16 +4,17 @@
 #
 Name     : ruby
 Version  : 2.4.4
-Release  : 53
-URL      : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
-Source0  : ftp://ftp.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
+Release  : 54
+URL      : https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
+Source0  : https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
 Summary  : Object Oriented Script Language
 Group    : Development/Tools
 License  : MIT Ruby
-Requires: ruby-bin
-Requires: ruby-lib
-Requires: ruby-doc
-Requires: ruby-data
+Requires: ruby-bin = %{version}-%{release}
+Requires: ruby-data = %{version}-%{release}
+Requires: ruby-lib = %{version}-%{release}
+Requires: ruby-license = %{version}-%{release}
+Requires: ruby-man = %{version}-%{release}
 BuildRequires : bison
 BuildRequires : doxygen
 BuildRequires : gmp-dev
@@ -42,7 +43,9 @@ into this directory.
 %package bin
 Summary: bin components for the ruby package.
 Group: Binaries
-Requires: ruby-data
+Requires: ruby-data = %{version}-%{release}
+Requires: ruby-license = %{version}-%{release}
+Requires: ruby-man = %{version}-%{release}
 
 %description bin
 bin components for the ruby package.
@@ -59,30 +62,39 @@ data components for the ruby package.
 %package dev
 Summary: dev components for the ruby package.
 Group: Development
-Requires: ruby-lib
-Requires: ruby-bin
-Requires: ruby-data
-Provides: ruby-devel
+Requires: ruby-lib = %{version}-%{release}
+Requires: ruby-bin = %{version}-%{release}
+Requires: ruby-data = %{version}-%{release}
+Provides: ruby-devel = %{version}-%{release}
 
 %description dev
 dev components for the ruby package.
 
 
-%package doc
-Summary: doc components for the ruby package.
-Group: Documentation
-
-%description doc
-doc components for the ruby package.
-
-
 %package lib
 Summary: lib components for the ruby package.
 Group: Libraries
-Requires: ruby-data
+Requires: ruby-data = %{version}-%{release}
+Requires: ruby-license = %{version}-%{release}
 
 %description lib
 lib components for the ruby package.
+
+
+%package license
+Summary: license components for the ruby package.
+Group: Default
+
+%description license
+license components for the ruby package.
+
+
+%package man
+Summary: man components for the ruby package.
+Group: Default
+
+%description man
+man components for the ruby package.
 
 
 %prep
@@ -94,7 +106,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526018251
+export SOURCE_DATE_EPOCH=1542266928
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -103,8 +115,19 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=use
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1526018251
+export SOURCE_DATE_EPOCH=1542266928
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/ruby
+cp COPYING %{buildroot}/usr/share/package-licenses/ruby/COPYING
+cp ext/fiddle/libffi-3.2.1/LICENSE %{buildroot}/usr/share/package-licenses/ruby/ext_fiddle_libffi-3.2.1_LICENSE
+cp ext/psych/yaml/LICENSE %{buildroot}/usr/share/package-licenses/ruby/ext_psych_yaml_LICENSE
+cp gems/did_you_mean-1.1.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/gems_did_you_mean-1.1.0_LICENSE.txt
+cp gems/net-telnet-0.1.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/gems_net-telnet-0.1.1_LICENSE.txt
+cp gems/power_assert-0.4.1/COPYING %{buildroot}/usr/share/package-licenses/ruby/gems_power_assert-0.4.1_COPYING
+cp gems/rake-12.0.0/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/gems_rake-12.0.0_MIT-LICENSE
+cp gems/test-unit-3.2.3/COPYING %{buildroot}/usr/share/package-licenses/ruby/gems_test-unit-3.2.3_COPYING
+cp gems/xmlrpc-0.2.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/gems_xmlrpc-0.2.1_LICENSE.txt
+cp lib/rubygems/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/lib_rubygems_LICENSE.txt
 %make_install
 
 %files
@@ -13890,10 +13913,6 @@ rm -rf %{buildroot}
 /usr/lib64/libruby.so
 /usr/lib64/pkgconfig/ruby-2.4.pc
 
-%files doc
-%defattr(-,root,root,-)
-%doc /usr/share/man/man1/*
-
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libruby.so.2.4
@@ -13994,3 +14013,23 @@ rm -rf %{buildroot}
 /usr/lib64/ruby/2.4.0/x86_64-linux-gnu/strscan.so
 /usr/lib64/ruby/2.4.0/x86_64-linux-gnu/syslog.so
 /usr/lib64/ruby/2.4.0/x86_64-linux-gnu/zlib.so
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/ruby/COPYING
+/usr/share/package-licenses/ruby/ext_fiddle_libffi-3.2.1_LICENSE
+/usr/share/package-licenses/ruby/ext_psych_yaml_LICENSE
+/usr/share/package-licenses/ruby/gems_did_you_mean-1.1.0_LICENSE.txt
+/usr/share/package-licenses/ruby/gems_net-telnet-0.1.1_LICENSE.txt
+/usr/share/package-licenses/ruby/gems_power_assert-0.4.1_COPYING
+/usr/share/package-licenses/ruby/gems_rake-12.0.0_MIT-LICENSE
+/usr/share/package-licenses/ruby/gems_test-unit-3.2.3_COPYING
+/usr/share/package-licenses/ruby/gems_xmlrpc-0.2.1_LICENSE.txt
+/usr/share/package-licenses/ruby/lib_rubygems_LICENSE.txt
+
+%files man
+%defattr(0644,root,root,0755)
+/usr/share/man/man1/erb.1
+/usr/share/man/man1/irb.1
+/usr/share/man/man1/ri.1
+/usr/share/man/man1/ruby.1
