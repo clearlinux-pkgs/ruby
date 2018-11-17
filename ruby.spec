@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.4.4
-Release  : 55
+Release  : 56
 URL      : https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
 Source0  : https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.xz
 Summary  : Object Oriented Script Language
@@ -106,7 +106,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542266928
+export SOURCE_DATE_EPOCH=1542431717
 export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -115,7 +115,7 @@ export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=use
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1542266928
+export SOURCE_DATE_EPOCH=1542431717
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
 cp COPYING %{buildroot}/usr/share/package-licenses/ruby/COPYING
