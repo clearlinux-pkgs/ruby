@@ -10,6 +10,7 @@ notmuch
 ntp
 ocl-icd
 ragel
+rrdtool
 ruby
 subversion
 swig

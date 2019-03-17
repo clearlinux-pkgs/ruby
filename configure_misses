@@ -5,9 +5,9 @@ Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-gobjcopy
 Configure miss: x86_64-generic-linux-gnu-dtrace
 Configure miss: dtrace
-Configure miss: whether -diag-disable=2259 is accepted as CFLAGS
-Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
 Configure miss: whether -Wdivision-by-zero is accepted as CFLAGS
+Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
+Configure miss: whether -diag-disable=175,188,2259 is accepted as CFLAGS
 Configure miss: whether -Wextra-tokens is accepted as CFLAGS
 Configure miss: whether -Qunused-arguments is accepted as CFLAGS
 Configure miss: whether -fp-model precise is accepted as CFLAGS
@@ -28,6 +28,9 @@ Configure miss: net/socket.h presence
 Configure miss: net/socket.h
 Configure miss: process.h usability
 Configure miss: process.h presence
+Configure miss: sanitizer/msan_interface.h usability
+Configure miss: sanitizer/msan_interface.h presence
+Configure miss: sanitizer/msan_interface.h
 Configure miss: setjmpex.h usability
 Configure miss: setjmpex.h presence
 Configure miss: setjmpex.h
@@ -64,8 +67,8 @@ Configure miss: setrgid
 Configure miss: setruid
 Configure miss: spawnv
 Configure miss: whether qsort_r is BSD version
-Configure miss: external altzone
-Configure miss: pthread_kill in -lthr
+Configure miss: native coroutine implementation for x86_64-linux-gnu
+Configure miss: pthread_create in -lthr
 Configure miss: pthread_np.h
 Configure miss: pthread_attr_get_np
 Configure miss: pthread_get_stackaddr_np
@@ -78,7 +81,9 @@ Configure miss: if mcontext_t is a pointer
 Configure miss: elf_abi.h usability
 Configure miss: elf_abi.h presence
 Configure miss: elf_abi.h
-Configure miss: broken backtrace
+Configure miss: mach-o/loader.h usability
+Configure miss: mach-o/loader.h presence
+Configure miss: mach-o/loader.h
 Configure miss: valgrind/memcheck.h usability
 Configure miss: valgrind/memcheck.h presence
 Configure miss: valgrind/memcheck.h
