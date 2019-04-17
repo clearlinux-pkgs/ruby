@@ -5,7 +5,6 @@ ceph
 cmake
 digikam
 gvim
-libsolv
 notmuch
 ntp
 ocl-icd
