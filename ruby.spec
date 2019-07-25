@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.6.3
-Release  : 59
+Release  : 60
 URL      : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz
 Summary  : Object Oriented Script Language
@@ -15,13 +15,23 @@ Requires: ruby-data = %{version}-%{release}
 Requires: ruby-lib = %{version}-%{release}
 Requires: ruby-license = %{version}-%{release}
 Requires: ruby-man = %{version}-%{release}
+BuildRequires : automake
+BuildRequires : automake-dev
+BuildRequires : bison
 BuildRequires : doxygen
+BuildRequires : gettext-bin
 BuildRequires : gmp-dev
 BuildRequires : graphviz
+BuildRequires : groff
+BuildRequires : libtool
+BuildRequires : libtool-dev
+BuildRequires : m4
 BuildRequires : openssl
 BuildRequires : openssl-dev
+BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(zlib)
 BuildRequires : ruby
+Patch1: 0001-update-configure.ac-to-recognize-more-linux-OS-alias.patch
 
 %description
 rb_optparse.bash   bash completion script
@@ -89,23 +99,24 @@ man components for the ruby package.
 
 %prep
 %setup -q -n ruby-2.6.3
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555521957
-export LDFLAGS="${LDFLAGS} -fno-lto"
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-%configure --disable-static --prefix=/usr --enable-shared --disable-rpath --with-dbm-type=gdbm_compat --with-out-ext=tcl --with-out-ext=tk
+export SOURCE_DATE_EPOCH=1564036378
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+%reconfigure --disable-static --prefix=/usr --enable-shared --disable-rpath --with-dbm-type=gdbm_compat --with-out-ext=tcl --with-out-ext=tk
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1555521957
+export SOURCE_DATE_EPOCH=1564036378
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
 cp COPYING %{buildroot}/usr/share/package-licenses/ruby/COPYING

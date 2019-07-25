@@ -1,3 +1,5 @@
+libruby.so.2.6:_coroutine_transfer
+libruby.so.2.6:coroutine_transfer
 libruby.so.2.6:dln_find_exe_r
 libruby.so.2.6:dln_find_file_r
 libruby.so.2.6:dln_load

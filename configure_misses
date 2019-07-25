@@ -67,7 +67,6 @@ Configure miss: setrgid
 Configure miss: setruid
 Configure miss: spawnv
 Configure miss: whether qsort_r is BSD version
-Configure miss: native coroutine implementation for x86_64-linux-gnu
 Configure miss: pthread_create in -lthr
 Configure miss: pthread_np.h
 Configure miss: pthread_attr_get_np
@@ -84,6 +83,7 @@ Configure miss: elf_abi.h
 Configure miss: mach-o/loader.h usability
 Configure miss: mach-o/loader.h presence
 Configure miss: mach-o/loader.h
+Configure miss: broken backtrace
 Configure miss: valgrind/memcheck.h usability
 Configure miss: valgrind/memcheck.h presence
 Configure miss: valgrind/memcheck.h
