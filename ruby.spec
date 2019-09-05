@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.6.3
-Release  : 60
+Release  : 61
 URL      : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz
 Summary  : Object Oriented Script Language
@@ -26,10 +26,12 @@ BuildRequires : groff
 BuildRequires : libtool
 BuildRequires : libtool-dev
 BuildRequires : m4
+BuildRequires : ncurses-dev
 BuildRequires : openssl
 BuildRequires : openssl-dev
 BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(zlib)
+BuildRequires : readline-dev
 BuildRequires : ruby
 Patch1: 0001-update-configure.ac-to-recognize-more-linux-OS-alias.patch
 
@@ -105,8 +107,8 @@ man components for the ruby package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1564036378
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1567704389
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -116,7 +118,7 @@ export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1564036378
+export SOURCE_DATE_EPOCH=1567704389
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
 cp COPYING %{buildroot}/usr/share/package-licenses/ruby/COPYING
@@ -17328,6 +17330,7 @@ cp spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/spec_ruby_LICE
 /usr/lib64/ruby/2.6.0/x86_64-linux-gnu/pty.so
 /usr/lib64/ruby/2.6.0/x86_64-linux-gnu/racc/cparse.so
 /usr/lib64/ruby/2.6.0/x86_64-linux-gnu/rbconfig/sizeof.so
+/usr/lib64/ruby/2.6.0/x86_64-linux-gnu/readline.so
 /usr/lib64/ruby/2.6.0/x86_64-linux-gnu/ripper.so
 /usr/lib64/ruby/2.6.0/x86_64-linux-gnu/sdbm.so
 /usr/lib64/ruby/2.6.0/x86_64-linux-gnu/socket.so
