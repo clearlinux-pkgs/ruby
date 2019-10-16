@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.6.5
-Release  : 62
+Release  : 63
 URL      : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz
 Summary  : Object Oriented Script Language
