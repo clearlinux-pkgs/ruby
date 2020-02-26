@@ -4,3 +4,4 @@ doxygen
 gmp-dev
 graphviz
 groff
+valgrind-dev

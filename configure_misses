@@ -84,9 +84,6 @@ Configure miss: mach-o/loader.h usability
 Configure miss: mach-o/loader.h presence
 Configure miss: mach-o/loader.h
 Configure miss: broken backtrace
-Configure miss: valgrind/memcheck.h usability
-Configure miss: valgrind/memcheck.h presence
-Configure miss: valgrind/memcheck.h
 Configure miss: whether wrapper for LD_LIBRARY_PATH is needed
 Configure miss: whether dtrace USDT is available
 Configure miss: _setjmpex as a macro or function

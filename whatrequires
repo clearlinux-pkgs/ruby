@@ -6,7 +6,9 @@ cmake
 digikam
 dolphin
 gvim
+kio
 notmuch
+ntopng
 ntp
 ocl-icd
 ragel

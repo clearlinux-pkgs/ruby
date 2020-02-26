@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.6.5
-Release  : 63
+Release  : 64
 URL      : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz
 Summary  : Object Oriented Script Language
@@ -17,10 +17,12 @@ Requires: ruby-license = %{version}-%{release}
 Requires: ruby-man = %{version}-%{release}
 BuildRequires : automake
 BuildRequires : automake-dev
+BuildRequires : bison
 BuildRequires : doxygen
 BuildRequires : gettext-bin
 BuildRequires : gmp-dev
 BuildRequires : graphviz
+BuildRequires : groff
 BuildRequires : libtool
 BuildRequires : libtool-dev
 BuildRequires : m4
@@ -31,7 +33,9 @@ BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(zlib)
 BuildRequires : readline-dev
 BuildRequires : ruby
+BuildRequires : valgrind-dev
 Patch1: 0001-update-configure.ac-to-recognize-more-linux-OS-alias.patch
+Patch2: CVE-2020-8130.patch
 
 %description
 C-API Specs
@@ -97,14 +101,16 @@ man components for the ruby package.
 
 %prep
 %setup -q -n ruby-2.6.5
+cd %{_builddir}/ruby-2.6.5
 %patch1 -p1
+%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570644004
+export SOURCE_DATE_EPOCH=1582754328
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -114,20 +120,20 @@ export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1570644004
+export SOURCE_DATE_EPOCH=1582754328
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
-cp COPYING %{buildroot}/usr/share/package-licenses/ruby/COPYING
-cp ext/fiddle/libffi-3.2.1/LICENSE %{buildroot}/usr/share/package-licenses/ruby/ext_fiddle_libffi-3.2.1_LICENSE
-cp gems/did_you_mean-1.3.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/gems_did_you_mean-1.3.0_LICENSE.txt
-cp gems/net-telnet-0.2.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/gems_net-telnet-0.2.0_LICENSE.txt
-cp gems/power_assert-1.1.3/COPYING %{buildroot}/usr/share/package-licenses/ruby/gems_power_assert-1.1.3_COPYING
-cp gems/rake-12.3.2/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/gems_rake-12.3.2_MIT-LICENSE
-cp gems/test-unit-3.2.9/COPYING %{buildroot}/usr/share/package-licenses/ruby/gems_test-unit-3.2.9_COPYING
-cp gems/xmlrpc-0.3.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/gems_xmlrpc-0.3.0_LICENSE.txt
-cp lib/bundler/templates/newgem/LICENSE.txt.tt %{buildroot}/usr/share/package-licenses/ruby/lib_bundler_templates_newgem_LICENSE.txt.tt
-cp spec/mspec/LICENSE %{buildroot}/usr/share/package-licenses/ruby/spec_mspec_LICENSE
-cp spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/spec_ruby_LICENSE
+cp %{_builddir}/ruby-2.6.5/COPYING %{buildroot}/usr/share/package-licenses/ruby/f72c0853a775f6f5d7a9bbbe17af857c41b49e78
+cp %{_builddir}/ruby-2.6.5/ext/fiddle/libffi-3.2.1/LICENSE %{buildroot}/usr/share/package-licenses/ruby/0155a7d592674828653b18e044fe6ea2685fac13
+cp %{_builddir}/ruby-2.6.5/gems/did_you_mean-1.3.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/139fba16005c525d608a786ba9a718815f3144ed
+cp %{_builddir}/ruby-2.6.5/gems/net-telnet-0.2.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/df734091d6dbc9d20382b4084e68396a483582bd
+cp %{_builddir}/ruby-2.6.5/gems/power_assert-1.1.3/COPYING %{buildroot}/usr/share/package-licenses/ruby/a674de2b6b89334925daf0a6e73386f47f5d3fbe
+cp %{_builddir}/ruby-2.6.5/gems/rake-12.3.2/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/c95ae329fc7b2e1ddae43c9a690f5dcc21e8d5a5
+cp %{_builddir}/ruby-2.6.5/gems/test-unit-3.2.9/COPYING %{buildroot}/usr/share/package-licenses/ruby/efbe998379703b6ca380277729a7759c69a32fd3
+cp %{_builddir}/ruby-2.6.5/gems/xmlrpc-0.3.0/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/df734091d6dbc9d20382b4084e68396a483582bd
+cp %{_builddir}/ruby-2.6.5/lib/bundler/templates/newgem/LICENSE.txt.tt %{buildroot}/usr/share/package-licenses/ruby/a77f60066517a62a4791c86d456c73eba53ca37a
+cp %{_builddir}/ruby-2.6.5/spec/mspec/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
+cp %{_builddir}/ruby-2.6.5/spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
 %make_install
 
 %files
@@ -17336,17 +17342,15 @@ cp spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/spec_ruby_LICE
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/ruby/COPYING
-/usr/share/package-licenses/ruby/ext_fiddle_libffi-3.2.1_LICENSE
-/usr/share/package-licenses/ruby/gems_did_you_mean-1.3.0_LICENSE.txt
-/usr/share/package-licenses/ruby/gems_net-telnet-0.2.0_LICENSE.txt
-/usr/share/package-licenses/ruby/gems_power_assert-1.1.3_COPYING
-/usr/share/package-licenses/ruby/gems_rake-12.3.2_MIT-LICENSE
-/usr/share/package-licenses/ruby/gems_test-unit-3.2.9_COPYING
-/usr/share/package-licenses/ruby/gems_xmlrpc-0.3.0_LICENSE.txt
-/usr/share/package-licenses/ruby/lib_bundler_templates_newgem_LICENSE.txt.tt
-/usr/share/package-licenses/ruby/spec_mspec_LICENSE
-/usr/share/package-licenses/ruby/spec_ruby_LICENSE
+/usr/share/package-licenses/ruby/0155a7d592674828653b18e044fe6ea2685fac13
+/usr/share/package-licenses/ruby/139fba16005c525d608a786ba9a718815f3144ed
+/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
+/usr/share/package-licenses/ruby/a674de2b6b89334925daf0a6e73386f47f5d3fbe
+/usr/share/package-licenses/ruby/a77f60066517a62a4791c86d456c73eba53ca37a
+/usr/share/package-licenses/ruby/c95ae329fc7b2e1ddae43c9a690f5dcc21e8d5a5
+/usr/share/package-licenses/ruby/df734091d6dbc9d20382b4084e68396a483582bd
+/usr/share/package-licenses/ruby/efbe998379703b6ca380277729a7759c69a32fd3
+/usr/share/package-licenses/ruby/f72c0853a775f6f5d7a9bbbe17af857c41b49e78
 
 %files man
 %defattr(0644,root,root,0755)
