@@ -1,7 +1,5 @@
-2.6.5
-bison
+2.6.6
 doxygen
 gmp-dev
 graphviz
-groff
 valgrind-dev
