@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 2.7.1
-Release  : 66
+Release  : 67
 URL      : https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.xz
 Source0  : https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.xz
 Summary  : Object Oriented Script Language
@@ -93,11 +93,16 @@ man components for the ruby package.
 cd %{_builddir}/ruby-2.7.1
 
 %build
+## build_prepend content
+# fix a couple /usr/local/bin/ruby shebang lines
+sed -i '1s|local/||' libexec/y2racc
+sed -i '1s|local/||' libexec/racc2y
+## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594627021
+export SOURCE_DATE_EPOCH=1594660450
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
@@ -107,7 +112,7 @@ export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1594627021
+export SOURCE_DATE_EPOCH=1594660450
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
 cp %{_builddir}/ruby-2.7.1/COPYING %{buildroot}/usr/share/package-licenses/ruby/d1f8c17828476a4833da54be0744c00ee46b9db4
