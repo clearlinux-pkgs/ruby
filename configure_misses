@@ -15,6 +15,9 @@ Configure miss: shutdown in -lsocket
 Configure miss: atomic.h usability
 Configure miss: atomic.h presence
 Configure miss: atomic.h
+Configure miss: copyfile.h usability
+Configure miss: copyfile.h presence
+Configure miss: copyfile.h
 Configure miss: direct.h usability
 Configure miss: direct.h presence
 Configure miss: malloc/malloc.h usability
@@ -48,12 +51,12 @@ Configure miss: struct stat.st_mtimespec
 Configure miss: struct stat.st_ctimespec
 Configure miss: struct stat.st_ctimensec
 Configure miss: struct stat.st_birthtimespec
-Configure miss: broken erfc of glibc-2.3.6 on IA64
 Configure miss: sys/pstat.h usability
 Configure miss: sys/pstat.h presence
-Configure miss: broken memmem
 Configure miss: __syscall
 Configure miss: chsize
+Configure miss: explicit_memset
+Configure miss: fcopyfile
 Configure miss: fgetattrlist
 Configure miss: getattrlist
 Configure miss: getgidx

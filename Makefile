@@ -1,5 +1,5 @@
 PKG_NAME := ruby
-URL = https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.6.tar.gz
+URL = https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
