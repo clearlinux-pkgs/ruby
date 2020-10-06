@@ -208,6 +208,7 @@ libruby.so.2.7:rb_ascii8bit_encindex
 libruby.so.2.7:rb_ascii8bit_encoding
 libruby.so.2.7:rb_assert_failure
 libruby.so.2.7:rb_assoc_new
+libruby.so.2.7:rb_ast_add_local_table
 libruby.so.2.7:rb_ast_add_mark_object
 libruby.so.2.7:rb_ast_delete_node
 libruby.so.2.7:rb_ast_dispose

@@ -7,7 +7,7 @@ Configure miss: x86_64-generic-linux-gnu-dtrace
 Configure miss: dtrace
 Configure miss: whether -Wdivision-by-zero is accepted as CFLAGS
 Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
-Configure miss: whether -diag-disable=175,188,2259 is accepted as CFLAGS
+Configure miss: whether -diag-disable=175,188,1684,2259,2312 is accepted as CFLAGS
 Configure miss: whether -Wextra-tokens is accepted as CFLAGS
 Configure miss: whether -Qunused-arguments is accepted as CFLAGS
 Configure miss: whether -fp-model precise is accepted as CFLAGS
