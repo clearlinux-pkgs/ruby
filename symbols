@@ -602,6 +602,7 @@ libruby.so.2.7:rb_filesystem_encindex
 libruby.so.2.7:rb_filesystem_encoding
 libruby.so.2.7:rb_filesystem_str_new
 libruby.so.2.7:rb_filesystem_str_new_cstr
+libruby.so.2.7:rb_find_defined_class_by_owner
 libruby.so.2.7:rb_find_encoding
 libruby.so.2.7:rb_find_file
 libruby.so.2.7:rb_find_file_ext

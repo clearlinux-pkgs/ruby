@@ -1,93 +1,93 @@
-Configure miss: x86_64-generic-linux-gnu-ld
-Configure miss: x86_64-generic-linux-gnu-as
-Configure miss: x86_64-generic-linux-gnu-gobjdump
-Configure miss: x86_64-generic-linux-gnu-objcopy
-Configure miss: x86_64-generic-linux-gnu-gobjcopy
-Configure miss: x86_64-generic-linux-gnu-dtrace
-Configure miss: dtrace
-Configure miss: whether -Wdivision-by-zero is accepted as CFLAGS
-Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
-Configure miss: whether -diag-disable=175,188,1684,2259,2312 is accepted as CFLAGS
-Configure miss: whether -Wextra-tokens is accepted as CFLAGS
-Configure miss: whether -Qunused-arguments is accepted as CFLAGS
-Configure miss: whether -fp-model precise is accepted as CFLAGS
-Configure miss: shutdown in -lsocket
-Configure miss: atomic.h usability
-Configure miss: atomic.h presence
-Configure miss: atomic.h
-Configure miss: copyfile.h usability
-Configure miss: copyfile.h presence
-Configure miss: copyfile.h
-Configure miss: direct.h usability
-Configure miss: direct.h presence
-Configure miss: malloc/malloc.h usability
-Configure miss: malloc/malloc.h presence
-Configure miss: malloc/malloc.h
-Configure miss: malloc_np.h usability
-Configure miss: malloc_np.h presence
-Configure miss: malloc_np.h
-Configure miss: net/socket.h usability
-Configure miss: net/socket.h presence
-Configure miss: net/socket.h
-Configure miss: process.h usability
-Configure miss: process.h presence
-Configure miss: sanitizer/msan_interface.h usability
-Configure miss: sanitizer/msan_interface.h presence
-Configure miss: sanitizer/msan_interface.h
-Configure miss: setjmpex.h usability
-Configure miss: setjmpex.h presence
-Configure miss: setjmpex.h
-Configure miss: sys/attr.h usability
-Configure miss: sys/attr.h presence
-Configure miss: sys/attr.h
-Configure miss: sys/id.h usability
-Configure miss: sys/id.h presence
-Configure miss: sys/id.h
-Configure miss: sys/utime.h usability
-Configure miss: sys/utime.h presence
-Configure miss: struct stat.st_atimespec
-Configure miss: struct stat.st_atimensec
-Configure miss: struct stat.st_mtimespec
-Configure miss: struct stat.st_ctimespec
-Configure miss: struct stat.st_ctimensec
-Configure miss: struct stat.st_birthtimespec
-Configure miss: sys/pstat.h usability
-Configure miss: sys/pstat.h presence
 Configure miss: __syscall
+Configure miss: _setjmpex as a macro or function
+Configure miss: atomic.h
+Configure miss: atomic.h presence
+Configure miss: atomic.h usability
+Configure miss: broken backtrace
 Configure miss: chsize
+Configure miss: copyfile.h
+Configure miss: copyfile.h presence
+Configure miss: copyfile.h usability
+Configure miss: direct.h presence
+Configure miss: direct.h usability
+Configure miss: dtrace
+Configure miss: elf_abi.h
+Configure miss: elf_abi.h presence
+Configure miss: elf_abi.h usability
 Configure miss: explicit_memset
 Configure miss: fcopyfile
 Configure miss: fgetattrlist
 Configure miss: getattrlist
 Configure miss: getgidx
 Configure miss: getuidx
+Configure miss: if mcontext_t is a pointer
 Configure miss: isfinite
+Configure miss: mach-o/loader.h
+Configure miss: mach-o/loader.h presence
+Configure miss: mach-o/loader.h usability
+Configure miss: malloc/malloc.h
+Configure miss: malloc/malloc.h presence
+Configure miss: malloc/malloc.h usability
+Configure miss: malloc_np.h
+Configure miss: malloc_np.h presence
+Configure miss: malloc_np.h usability
 Configure miss: malloc_size
 Configure miss: memset_s
-Configure miss: qsort_s
-Configure miss: select_large_fdset
-Configure miss: setrgid
-Configure miss: setruid
-Configure miss: spawnv
-Configure miss: whether qsort_r is BSD version
-Configure miss: pthread_create in -lthr
-Configure miss: pthread_np.h
+Configure miss: net/socket.h
+Configure miss: net/socket.h presence
+Configure miss: net/socket.h usability
+Configure miss: process.h presence
+Configure miss: process.h usability
 Configure miss: pthread_attr_get_np
+Configure miss: pthread_create in -lthr
 Configure miss: pthread_get_stackaddr_np
 Configure miss: pthread_get_stacksize_np
-Configure miss: thr_stksegment
-Configure miss: pthread_stackseg_np
 Configure miss: pthread_getthrds_np
+Configure miss: pthread_np.h
 Configure miss: pthread_set_name_np
-Configure miss: if mcontext_t is a pointer
-Configure miss: elf_abi.h usability
-Configure miss: elf_abi.h presence
-Configure miss: elf_abi.h
-Configure miss: mach-o/loader.h usability
-Configure miss: mach-o/loader.h presence
-Configure miss: mach-o/loader.h
-Configure miss: broken backtrace
-Configure miss: whether wrapper for LD_LIBRARY_PATH is needed
-Configure miss: whether dtrace USDT is available
-Configure miss: _setjmpex as a macro or function
+Configure miss: pthread_stackseg_np
+Configure miss: qsort_s
+Configure miss: sanitizer/msan_interface.h
+Configure miss: sanitizer/msan_interface.h presence
+Configure miss: sanitizer/msan_interface.h usability
+Configure miss: select_large_fdset
+Configure miss: setjmpex.h
+Configure miss: setjmpex.h presence
+Configure miss: setjmpex.h usability
+Configure miss: setrgid
+Configure miss: setruid
+Configure miss: shutdown in -lsocket
 Configure miss: sigsetjmp as a macro or function
+Configure miss: spawnv
+Configure miss: struct stat.st_atimensec
+Configure miss: struct stat.st_atimespec
+Configure miss: struct stat.st_birthtimespec
+Configure miss: struct stat.st_ctimensec
+Configure miss: struct stat.st_ctimespec
+Configure miss: struct stat.st_mtimespec
+Configure miss: sys/attr.h
+Configure miss: sys/attr.h presence
+Configure miss: sys/attr.h usability
+Configure miss: sys/id.h
+Configure miss: sys/id.h presence
+Configure miss: sys/id.h usability
+Configure miss: sys/pstat.h presence
+Configure miss: sys/pstat.h usability
+Configure miss: sys/utime.h presence
+Configure miss: sys/utime.h usability
+Configure miss: thr_stksegment
+Configure miss: whether -Qunused-arguments is accepted as CFLAGS
+Configure miss: whether -Wdivision-by-zero is accepted as CFLAGS
+Configure miss: whether -Wextra-tokens is accepted as CFLAGS
+Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
+Configure miss: whether -diag-disable=175,188,1684,2259,2312 is accepted as CFLAGS
+Configure miss: whether -fp-model precise is accepted as CFLAGS
+Configure miss: whether dtrace USDT is available
+Configure miss: whether qsort_r is BSD version
+Configure miss: whether wrapper for LD_LIBRARY_PATH is needed
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-dtrace
+Configure miss: x86_64-generic-linux-gnu-gobjcopy
+Configure miss: x86_64-generic-linux-gnu-gobjdump
+Configure miss: x86_64-generic-linux-gnu-ld
+Configure miss: x86_64-generic-linux-gnu-objcopy
