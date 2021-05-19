@@ -1,3 +1,0 @@
-# fix a couple /usr/local/bin/ruby shebang lines
-sed -i '1s|local/||' libexec/y2racc
-sed -i '1s|local/||' libexec/racc2y
