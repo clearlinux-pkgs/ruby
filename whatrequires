@@ -1,8 +1,8 @@
 # This file contains recursive sources that require this package
 LVM2
-bro
 ceph
 cmake
+compat-webkitgtk-soname40
 digikam
 dolphin
 gvim

@@ -666,6 +666,7 @@ libruby.so.3.0:rb_gc_mark_maybe
 libruby.so.3.0:rb_gc_mark_movable
 libruby.so.3.0:rb_gc_mark_values
 libruby.so.3.0:rb_gc_mark_vm_stack_values
+libruby.so.3.0:rb_gc_ractor_newobj_cache_clear
 libruby.so.3.0:rb_gc_register_address
 libruby.so.3.0:rb_gc_register_mark_object
 libruby.so.3.0:rb_gc_start
