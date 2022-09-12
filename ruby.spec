@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 3.0.3
-Release  : 73
+Release  : 74
 URL      : https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.3.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.3.tar.gz
 Summary  : Object Oriented Script Language
