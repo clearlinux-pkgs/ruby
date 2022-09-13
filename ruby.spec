@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 3.0.3
-Release  : 74
+Release  : 75
 URL      : https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.3.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.3.tar.gz
 Summary  : Object Oriented Script Language
@@ -98,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639506580
+export SOURCE_DATE_EPOCH=1663080613
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
@@ -113,23 +113,23 @@ export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-re
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1639506580
+export SOURCE_DATE_EPOCH=1663080613
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/power_assert-1.2.0/COPYING %{buildroot}/usr/share/package-licenses/ruby/a674de2b6b89334925daf0a6e73386f47f5d3fbe
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/rake-13.0.3/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/c95ae329fc7b2e1ddae43c9a690f5dcc21e8d5a5
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/rbs-1.4.0/COPYING %{buildroot}/usr/share/package-licenses/ruby/448f9ed142bced87490e7c5afbb3e78d43b2544d
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/rexml-3.2.5/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/rss-0.2.9/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/test-unit-3.3.7/COPYING %{buildroot}/usr/share/package-licenses/ruby/723fda8704af0189c955688339a3ee20ff89a679
-cp %{_builddir}/ruby-3.0.3/.bundle/gems/typeprof-0.15.2/LICENSE %{buildroot}/usr/share/package-licenses/ruby/f6c2bf4a30d383819b50580cbdb253c03b2bbcd1
-cp %{_builddir}/ruby-3.0.3/COPYING %{buildroot}/usr/share/package-licenses/ruby/d1f8c17828476a4833da54be0744c00ee46b9db4
-cp %{_builddir}/ruby-3.0.3/COPYING.ja %{buildroot}/usr/share/package-licenses/ruby/06b49c202f79358ba5a69499c777207f71544c5c
-cp %{_builddir}/ruby-3.0.3/ext/fiddle/libffi-3.2.1/LICENSE %{buildroot}/usr/share/package-licenses/ruby/0155a7d592674828653b18e044fe6ea2685fac13
-cp %{_builddir}/ruby-3.0.3/ext/zlib/zlib-1.2.11/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/ruby/892b34f7865d90a6f949f50d95e49625a10bc7f0
-cp %{_builddir}/ruby-3.0.3/lib/bundler/templates/newgem/LICENSE.txt.tt %{buildroot}/usr/share/package-licenses/ruby/a77f60066517a62a4791c86d456c73eba53ca37a
-cp %{_builddir}/ruby-3.0.3/spec/mspec/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
-cp %{_builddir}/ruby-3.0.3/spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
+cp %{_builddir}/ruby-%{version}/.bundle/gems/power_assert-1.2.0/COPYING %{buildroot}/usr/share/package-licenses/ruby/a674de2b6b89334925daf0a6e73386f47f5d3fbe || :
+cp %{_builddir}/ruby-%{version}/.bundle/gems/rake-1%{version}/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/c95ae329fc7b2e1ddae43c9a690f5dcc21e8d5a5 || :
+cp %{_builddir}/ruby-%{version}/.bundle/gems/rbs-1.4.0/COPYING %{buildroot}/usr/share/package-licenses/ruby/448f9ed142bced87490e7c5afbb3e78d43b2544d || :
+cp %{_builddir}/ruby-%{version}/.bundle/gems/rexml-3.2.5/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
+cp %{_builddir}/ruby-%{version}/.bundle/gems/rss-0.2.9/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
+cp %{_builddir}/ruby-%{version}/.bundle/gems/test-unit-3.3.7/COPYING %{buildroot}/usr/share/package-licenses/ruby/723fda8704af0189c955688339a3ee20ff89a679 || :
+cp %{_builddir}/ruby-%{version}/.bundle/gems/typeprof-0.15.2/LICENSE %{buildroot}/usr/share/package-licenses/ruby/f6c2bf4a30d383819b50580cbdb253c03b2bbcd1 || :
+cp %{_builddir}/ruby-%{version}/COPYING %{buildroot}/usr/share/package-licenses/ruby/d1f8c17828476a4833da54be0744c00ee46b9db4 || :
+cp %{_builddir}/ruby-%{version}/COPYING.ja %{buildroot}/usr/share/package-licenses/ruby/06b49c202f79358ba5a69499c777207f71544c5c || :
+cp %{_builddir}/ruby-%{version}/ext/fiddle/libffi-3.2.1/LICENSE %{buildroot}/usr/share/package-licenses/ruby/0155a7d592674828653b18e044fe6ea2685fac13 || :
+cp %{_builddir}/ruby-%{version}/ext/zlib/zlib-1.2.11/contrib/dotzlib/LICENSE_1_0.txt %{buildroot}/usr/share/package-licenses/ruby/892b34f7865d90a6f949f50d95e49625a10bc7f0 || :
+cp %{_builddir}/ruby-%{version}/lib/bundler/templates/newgem/LICENSE.txt.tt %{buildroot}/usr/share/package-licenses/ruby/a77f60066517a62a4791c86d456c73eba53ca37a || :
+cp %{_builddir}/ruby-%{version}/spec/mspec/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b || :
+cp %{_builddir}/ruby-%{version}/spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b || :
 %make_install
 
 %files
@@ -615,19 +615,6 @@ cp %{_builddir}/ruby-3.0.3/spec/ruby/LICENSE %{buildroot}/usr/share/package-lice
 /usr/lib64/ruby/3.0.0/observer.rb
 /usr/lib64/ruby/3.0.0/open-uri.rb
 /usr/lib64/ruby/3.0.0/open3.rb
-/usr/lib64/ruby/3.0.0/openssl.rb
-/usr/lib64/ruby/3.0.0/openssl/bn.rb
-/usr/lib64/ruby/3.0.0/openssl/buffering.rb
-/usr/lib64/ruby/3.0.0/openssl/cipher.rb
-/usr/lib64/ruby/3.0.0/openssl/config.rb
-/usr/lib64/ruby/3.0.0/openssl/digest.rb
-/usr/lib64/ruby/3.0.0/openssl/hmac.rb
-/usr/lib64/ruby/3.0.0/openssl/marshal.rb
-/usr/lib64/ruby/3.0.0/openssl/pkcs5.rb
-/usr/lib64/ruby/3.0.0/openssl/pkey.rb
-/usr/lib64/ruby/3.0.0/openssl/ssl.rb
-/usr/lib64/ruby/3.0.0/openssl/version.rb
-/usr/lib64/ruby/3.0.0/openssl/x509.rb
 /usr/lib64/ruby/3.0.0/optionparser.rb
 /usr/lib64/ruby/3.0.0/optparse.rb
 /usr/lib64/ruby/3.0.0/optparse/ac.rb
@@ -2167,7 +2154,6 @@ cp %{_builddir}/ruby-3.0.3/spec/ruby/LICENSE %{buildroot}/usr/share/package-lice
 /usr/lib64/ruby/gems/3.0.0/specifications/default/observer-0.1.1.gemspec
 /usr/lib64/ruby/gems/3.0.0/specifications/default/open-uri-0.1.0.gemspec
 /usr/lib64/ruby/gems/3.0.0/specifications/default/open3-0.1.1.gemspec
-/usr/lib64/ruby/gems/3.0.0/specifications/default/openssl-2.2.1.gemspec
 /usr/lib64/ruby/gems/3.0.0/specifications/default/optparse-0.1.1.gemspec
 /usr/lib64/ruby/gems/3.0.0/specifications/default/ostruct-0.3.1.gemspec
 /usr/lib64/ruby/gems/3.0.0/specifications/default/pathname-0.1.0.gemspec
@@ -14513,7 +14499,6 @@ cp %{_builddir}/ruby-3.0.3/spec/ruby/LICENSE %{buildroot}/usr/share/package-lice
 /usr/lib64/ruby/3.0.0/x86_64-linux-gnu/monitor.so
 /usr/lib64/ruby/3.0.0/x86_64-linux-gnu/nkf.so
 /usr/lib64/ruby/3.0.0/x86_64-linux-gnu/objspace.so
-/usr/lib64/ruby/3.0.0/x86_64-linux-gnu/openssl.so
 /usr/lib64/ruby/3.0.0/x86_64-linux-gnu/pathname.so
 /usr/lib64/ruby/3.0.0/x86_64-linux-gnu/psych.so
 /usr/lib64/ruby/3.0.0/x86_64-linux-gnu/pty.so
