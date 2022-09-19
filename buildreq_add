@@ -6,3 +6,4 @@ pkgconfig(zlib)
 ruby
 readline-dev
 ncurses-dev
+yaml-dev
