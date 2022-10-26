@@ -4,7 +4,7 @@
 #
 Name     : ruby
 Version  : 3.2.0.preview2
-Release  : 78
+Release  : 79
 URL      : https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0-preview2.tar.gz
 Source0  : https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0-preview2.tar.gz
 Summary  : Object Oriented Script Language
@@ -23,7 +23,6 @@ BuildRequires : openssl
 BuildRequires : openssl-dev
 BuildRequires : pkgconfig(zlib)
 BuildRequires : readline-dev
-BuildRequires : ruby
 BuildRequires : valgrind-dev
 BuildRequires : yaml-dev
 
@@ -98,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663621396
+export SOURCE_DATE_EPOCH=1666807496
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
 export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
@@ -114,29 +113,31 @@ export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-re
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1663621396
+export SOURCE_DATE_EPOCH=1666807496
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ruby
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/debug-1.6.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/matrix-0.4.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-ftp-0.1.3/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-imap-0.2.3/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-pop-0.1.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-smtp-0.3.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/power_assert-2.0.1/COPYING %{buildroot}/usr/share/package-licenses/ruby/a674de2b6b89334925daf0a6e73386f47f5d3fbe || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/prime-0.1.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rake-13.0.6/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/c95ae329fc7b2e1ddae43c9a690f5dcc21e8d5a5 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rbs-2.6.0/COPYING %{buildroot}/usr/share/package-licenses/ruby/448f9ed142bced87490e7c5afbb3e78d43b2544d || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rexml-3.2.5/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rss-0.2.9/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/test-unit-3.5.3/COPYING %{buildroot}/usr/share/package-licenses/ruby/723fda8704af0189c955688339a3ee20ff89a679 || :
-cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/typeprof-0.21.3/LICENSE %{buildroot}/usr/share/package-licenses/ruby/f6c2bf4a30d383819b50580cbdb253c03b2bbcd1 || :
-cp %{_builddir}/ruby-3.2.0-preview2/COPYING %{buildroot}/usr/share/package-licenses/ruby/d1f8c17828476a4833da54be0744c00ee46b9db4 || :
-cp %{_builddir}/ruby-3.2.0-preview2/COPYING.ja %{buildroot}/usr/share/package-licenses/ruby/06b49c202f79358ba5a69499c777207f71544c5c || :
-cp %{_builddir}/ruby-3.2.0-preview2/lib/bundler/templates/newgem/LICENSE.txt.tt %{buildroot}/usr/share/package-licenses/ruby/a77f60066517a62a4791c86d456c73eba53ca37a || :
-cp %{_builddir}/ruby-3.2.0-preview2/spec/mspec/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b || :
-cp %{_builddir}/ruby-3.2.0-preview2/spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b || :
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/debug-1.6.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/matrix-0.4.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-ftp-0.1.3/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-imap-0.2.3/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-pop-0.1.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/net-smtp-0.3.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/power_assert-2.0.1/COPYING %{buildroot}/usr/share/package-licenses/ruby/a674de2b6b89334925daf0a6e73386f47f5d3fbe
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/prime-0.1.2/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rake-13.0.6/MIT-LICENSE %{buildroot}/usr/share/package-licenses/ruby/c95ae329fc7b2e1ddae43c9a690f5dcc21e8d5a5
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rbs-2.6.0/COPYING %{buildroot}/usr/share/package-licenses/ruby/448f9ed142bced87490e7c5afbb3e78d43b2544d
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rexml-3.2.5/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/rss-0.2.9/LICENSE.txt %{buildroot}/usr/share/package-licenses/ruby/1fe6bd959f2796d788815ca9c61315e8de3d4211
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/test-unit-3.5.3/COPYING %{buildroot}/usr/share/package-licenses/ruby/723fda8704af0189c955688339a3ee20ff89a679
+cp %{_builddir}/ruby-3.2.0-preview2/.bundle/gems/typeprof-0.21.3/LICENSE %{buildroot}/usr/share/package-licenses/ruby/f6c2bf4a30d383819b50580cbdb253c03b2bbcd1
+cp %{_builddir}/ruby-3.2.0-preview2/COPYING %{buildroot}/usr/share/package-licenses/ruby/d1f8c17828476a4833da54be0744c00ee46b9db4
+cp %{_builddir}/ruby-3.2.0-preview2/COPYING.ja %{buildroot}/usr/share/package-licenses/ruby/06b49c202f79358ba5a69499c777207f71544c5c
+cp %{_builddir}/ruby-3.2.0-preview2/lib/bundler/templates/newgem/LICENSE.txt.tt %{buildroot}/usr/share/package-licenses/ruby/a77f60066517a62a4791c86d456c73eba53ca37a
+cp %{_builddir}/ruby-3.2.0-preview2/spec/mspec/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
+cp %{_builddir}/ruby-3.2.0-preview2/spec/ruby/LICENSE %{buildroot}/usr/share/package-licenses/ruby/77b61b297fb5666d51a55a4b3f1213839e87a41b
 %make_install
+## Remove excluded files
+rm -f %{buildroot}*/usr/lib64/ruby/gems/*/extensions/x86_64-linux-gnu/*/*/gem.build_complete
 
 %files
 %defattr(-,root,root,-)
@@ -1185,8 +1186,6 @@ cp %{_builddir}/ruby-3.2.0-preview2/spec/ruby/LICENSE %{buildroot}/usr/share/pac
 /usr/lib64/ruby/gems/3.2.0+2/cache/rss-0.2.9.gem
 /usr/lib64/ruby/gems/3.2.0+2/cache/test-unit-3.5.3.gem
 /usr/lib64/ruby/gems/3.2.0+2/cache/typeprof-0.21.3.gem
-/usr/lib64/ruby/gems/3.2.0+2/extensions/x86_64-linux-gnu/3.2.0+2/debug-1.6.2/gem.build_complete
-/usr/lib64/ruby/gems/3.2.0+2/extensions/x86_64-linux-gnu/3.2.0+2/rbs-2.6.0/gem.build_complete
 /usr/lib64/ruby/gems/3.2.0+2/gems/bundler-2.4.0.dev/libexec/bundle
 /usr/lib64/ruby/gems/3.2.0+2/gems/bundler-2.4.0.dev/libexec/bundler
 /usr/lib64/ruby/gems/3.2.0+2/gems/debug-1.6.2/CONTRIBUTING.md
