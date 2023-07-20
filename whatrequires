@@ -1,9 +1,6 @@
 # This file contains recursive sources that require this package
 LVM2
-ceph
 cmake
-compat-webkitgtk-soname40
-digikam
 dolphin
 gvim
 kio
@@ -15,6 +12,5 @@ ocl-icd
 rrdtool
 subversion
 webkitgtk
-webkitgtk50
 webkitgtk60
 weechat
