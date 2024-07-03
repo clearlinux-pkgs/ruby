@@ -1,79 +1,160 @@
 Configure miss: __assume
+Configure miss: __assume
+Configure miss: __cospi
 Configure miss: __cospi
 Configure miss: __sinpi
+Configure miss: __sinpi
+Configure miss: __syscall
 Configure miss: __syscall
 Configure miss: _setjmpex as a macro or function
+Configure miss: _setjmpex as a macro or function
+Configure miss: afunix.h
 Configure miss: afunix.h
 Configure miss: atomic.h
+Configure miss: atomic.h
+Configure miss: broken backtrace
 Configure miss: broken backtrace
 Configure miss: chsize
+Configure miss: chsize
+Configure miss: copyfile.h
 Configure miss: copyfile.h
 Configure miss: dtrace
+Configure miss: dtrace
+Configure miss: elf_abi.h
 Configure miss: elf_abi.h
 Configure miss: explicit_memset
+Configure miss: explicit_memset
+Configure miss: fcopyfile
 Configure miss: fcopyfile
 Configure miss: fgetattrlist
+Configure miss: fgetattrlist
+Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: gas
+Configure miss: gas
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: getattrlist
+Configure miss: getattrlist
+Configure miss: getgidx
 Configure miss: getgidx
 Configure miss: getuidx
+Configure miss: getuidx
+Configure miss: gobjcopy
 Configure miss: gobjcopy
 Configure miss: gobjdump
+Configure miss: gobjdump
+Configure miss: gstrip
 Configure miss: gstrip
 Configure miss: if mcontext_t is a pointer
+Configure miss: if mcontext_t is a pointer
+Configure miss: isfinite
 Configure miss: isfinite
 Configure miss: mach-o/loader.h
+Configure miss: mach-o/loader.h
+Configure miss: malloc/malloc.h
 Configure miss: malloc/malloc.h
 Configure miss: malloc_np.h
+Configure miss: malloc_np.h
+Configure miss: malloc_size
 Configure miss: malloc_size
 Configure miss: memset_s
+Configure miss: memset_s
+Configure miss: net/socket.h
 Configure miss: net/socket.h
 Configure miss: pthread_attr_get_np
+Configure miss: pthread_attr_get_np
+Configure miss: pthread_create in -lthr
 Configure miss: pthread_create in -lthr
 Configure miss: pthread_get_stackaddr_np
+Configure miss: pthread_get_stackaddr_np
+Configure miss: pthread_get_stacksize_np
 Configure miss: pthread_get_stacksize_np
 Configure miss: pthread_getthrds_np
+Configure miss: pthread_getthrds_np
+Configure miss: pthread_np.h
 Configure miss: pthread_np.h
 Configure miss: pthread_set_name_np
+Configure miss: pthread_set_name_np
+Configure miss: pthread_stackseg_np
 Configure miss: pthread_stackseg_np
 Configure miss: qsort_s
+Configure miss: qsort_s
+Configure miss: rustc
 Configure miss: rustc
 Configure miss: sanitizer/msan_interface.h
+Configure miss: sanitizer/msan_interface.h
+Configure miss: select_large_fdset
 Configure miss: select_large_fdset
 Configure miss: setjmpex.h
+Configure miss: setjmpex.h
+Configure miss: setrgid
 Configure miss: setrgid
 Configure miss: setruid
+Configure miss: setruid
+Configure miss: shutdown in -lsocket
 Configure miss: shutdown in -lsocket
 Configure miss: sigsetjmp as a macro or function
+Configure miss: sigsetjmp as a macro or function
+Configure miss: spawnv
 Configure miss: spawnv
 Configure miss: struct stat.st_atimensec
+Configure miss: struct stat.st_atimensec
+Configure miss: struct stat.st_atimespec
 Configure miss: struct stat.st_atimespec
 Configure miss: struct stat.st_birthtimespec
+Configure miss: struct stat.st_birthtimespec
+Configure miss: struct stat.st_ctimensec
 Configure miss: struct stat.st_ctimensec
 Configure miss: struct stat.st_ctimespec
+Configure miss: struct stat.st_ctimespec
+Configure miss: struct stat.st_mtimespec
 Configure miss: struct stat.st_mtimespec
 Configure miss: sys/attr.h
+Configure miss: sys/attr.h
+Configure miss: sys/event.h
+Configure miss: sys/event.h
+Configure miss: sys/id.h
 Configure miss: sys/id.h
 Configure miss: thr_stksegment
+Configure miss: thr_stksegment
+Configure miss: whether -Qunused-arguments is accepted as CFLAGS
 Configure miss: whether -Qunused-arguments is accepted as CFLAGS
 Configure miss: whether -Wdivision-by-zero is accepted as CFLAGS
+Configure miss: whether -Wdivision-by-zero is accepted as CFLAGS
+Configure miss: whether -Wextra-tokens is accepted as CFLAGS
 Configure miss: whether -Wextra-tokens is accepted as CFLAGS
 Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
+Configure miss: whether -Wshorten-64-to-32 is accepted as CFLAGS
+Configure miss: whether -diag-disable=175,188,1684,2259,2312 is accepted as CFLAGS
 Configure miss: whether -diag-disable=175,188,1684,2259,2312 is accepted as CFLAGS
 Configure miss: whether -fdeclspec is accepted as CXXFLAGS
+Configure miss: whether -fdeclspec is accepted as CXXFLAGS
+Configure miss: whether -fdeclspec is accepted as LDFLAGS
 Configure miss: whether -fdeclspec is accepted as LDFLAGS
 Configure miss: whether -fp-model precise is accepted as CFLAGS
+Configure miss: whether -fp-model precise is accepted as CFLAGS
+Configure miss: whether dtrace USDT is available
 Configure miss: whether dtrace USDT is available
 Configure miss: whether it is Android
+Configure miss: whether it is Android
+Configure miss: whether qsort_r is BSD version
 Configure miss: whether qsort_r is BSD version
 Configure miss: whether sys_nerr is declared
+Configure miss: whether sys_nerr is declared
+Configure miss: whether wrapper for LD_LIBRARY_PATH is needed
 Configure miss: whether wrapper for LD_LIBRARY_PATH is needed
 Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-as
+Configure miss: x86_64-generic-linux-gnu-dtrace
 Configure miss: x86_64-generic-linux-gnu-dtrace
 Configure miss: x86_64-generic-linux-gnu-gas
+Configure miss: x86_64-generic-linux-gnu-gas
+Configure miss: x86_64-generic-linux-gnu-gobjcopy
 Configure miss: x86_64-generic-linux-gnu-gobjcopy
 Configure miss: x86_64-generic-linux-gnu-gobjdump
+Configure miss: x86_64-generic-linux-gnu-gobjdump
 Configure miss: x86_64-generic-linux-gnu-gstrip
+Configure miss: x86_64-generic-linux-gnu-gstrip
+Configure miss: x86_64-generic-linux-gnu-objcopy
 Configure miss: x86_64-generic-linux-gnu-objcopy
