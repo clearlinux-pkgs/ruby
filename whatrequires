@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
 LVM2
+asciidoctor
 cmake
+colm
 dolphin
 gvim
 kio
