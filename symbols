@@ -1227,7 +1227,6 @@ libruby.so.3.3:rb_reg_onig_match
 libruby.so.3.3:rb_reg_options
 libruby.so.3.3:rb_reg_prepare_re
 libruby.so.3.3:rb_reg_quote
-libruby.so.3.3:rb_reg_raise_timeout
 libruby.so.3.3:rb_reg_regcomp
 libruby.so.3.3:rb_reg_region_copy
 libruby.so.3.3:rb_reg_regsub
