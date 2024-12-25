@@ -46,6 +46,8 @@ Configure miss: gobjdump
 Configure miss: gobjdump
 Configure miss: gstrip
 Configure miss: gstrip
+Configure miss: if building with modular GC support
+Configure miss: if building with modular GC support
 Configure miss: if mcontext_t is a pointer
 Configure miss: if mcontext_t is a pointer
 Configure miss: isfinite
@@ -94,8 +96,6 @@ Configure miss: setruid
 Configure miss: setruid
 Configure miss: shutdown in -lsocket
 Configure miss: shutdown in -lsocket
-Configure miss: sigsetjmp as a macro or function
-Configure miss: sigsetjmp as a macro or function
 Configure miss: spawnv
 Configure miss: spawnv
 Configure miss: struct stat.st_atimensec
@@ -134,6 +134,8 @@ Configure miss: whether -fdeclspec is accepted as LDFLAGS
 Configure miss: whether -fdeclspec is accepted as LDFLAGS
 Configure miss: whether -fp-model precise is accepted as CFLAGS
 Configure miss: whether -fp-model precise is accepted as CFLAGS
+Configure miss: whether PAGE_SIZE is compile-time const
+Configure miss: whether PAGE_SIZE is compile-time const
 Configure miss: whether dtrace USDT is available
 Configure miss: whether dtrace USDT is available
 Configure miss: whether it is Android
