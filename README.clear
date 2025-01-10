@@ -1,0 +1,5 @@
+Because ruby gems have versioned paths in the spec file,
+the following are required to be re-autospec'd on minor
+version bumps:
+
+asciidoctor
