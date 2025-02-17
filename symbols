@@ -1552,6 +1552,7 @@ libruby.so.3.4:rb_ull2inum
 libruby.so.3.4:rb_undef
 libruby.so.3.4:rb_undef_alloc_func
 libruby.so.3.4:rb_undef_method
+libruby.so.3.4:rb_undefine_finalizer
 libruby.so.3.4:rb_unexpected_type
 libruby.so.3.4:rb_update_max_fd
 libruby.so.3.4:rb_usascii_encindex
