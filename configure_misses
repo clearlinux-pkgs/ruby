@@ -98,6 +98,8 @@ Configure miss: shutdown in -lsocket
 Configure miss: shutdown in -lsocket
 Configure miss: spawnv
 Configure miss: spawnv
+Configure miss: stdbool.h that conforms to C99
+Configure miss: stdbool.h that conforms to C99
 Configure miss: struct stat.st_atimensec
 Configure miss: struct stat.st_atimensec
 Configure miss: struct stat.st_atimespec
